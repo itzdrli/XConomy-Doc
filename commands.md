@@ -1,0 +1,30 @@
+# 指令
+
+## 玩家指令
+
+- 所有指令均以`/`开头
+```
+balance/money  -  查询余额
+balance/money <玩家>  -  查询<玩家>余额
+pay <玩家> <金额>  -  转账给<玩家><金额>
+paytoggle  -  切换是否接受转账
+balancetop  -  查询余额排行榜
+xconomy help  -  查看帮助
+```
+
+## OP/管理员指令
+
+- 所有指令均以`/`开头
+```
+balance/money give <玩家> <金额>  -  给予<玩家><金额>
+balance/money take <玩家> <金额>  -  从<玩家>取走<金额>
+balance/money set <玩家> <金额>  -  设置<玩家>金额为<金额>
+balance/money give * <all/online> <amount> <reason>  -  给予<所有/在线玩家><金额>
+balance/money take * <all/online> <amount> <reason>  -  从<所有/在线玩家>取走<金额>
+balancetop hide/display <玩家>  -  显示或隐藏<玩家>在TOP10上的数据
+paytoggle <玩家>  -  切换<玩家>是否接受转载
+paypermission set <玩家> true/false  -  设置玩家(*为全局)的pay权限
+paypermission remove <玩家>  -  设置玩家的pay权限为默认
+xconomy reload  -  重新加载message.yml
+xconomy deldata <玩家>  -  删除玩家的数据
+```

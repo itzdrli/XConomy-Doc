@@ -1,0 +1,32 @@
+# 功能
+
+经济插件，Bukkit版硬前置为 [Vault](https://www.spigotmc.org/resources/vault.34315/), 支持BossShopPro、QuickShopR等使用Vault API的商店插件。
+
+> (Sponge版使用Sponge内置经济API)
+
+支持使用MySQL存储数据，有缓存功能，支持BungeeCord/Velocity子服数据同步。
+
+## **注意**
+
+如果您正在使用**其他群组数据同步插件**，请确保在使用XConomy期间其**Vault相关同步功能**关闭。
+
+本插件与 **CMI** 插件存在指令冲突，请将 **CMI / Alias** 内的 `money` `bal` `balance` `pay` `baltop` 等指令修改为 `false`
+
+如果你使用的是**MySQL 8**，并且无法正常连接到数据库，请**下载** [DatabaseDrivers](https://github.com/YiC200333/DatabaseDrivers/releases) **(1.17.X以上版本服务器不需要)**
+
+## 支持版本
+
+理论支持1.7.0及以上的所有版本，欢迎进入社区/Github反馈bug和意见
+
+## 如何进行子服务器数据同步
+
+
+在需要同步的子服务器上和BungeeCord/Velocity端上都安装本插件
+
+然后在`config.yml`中启用 BungeeCord 即可(BungeeCord端无配置文件)
+
+## 安装须知
+
+Bukkit版需要前置插件 **[Vault](https://www.spigotmc.org/resources/vault.34315/)**
+
+Sponge版需要**SpongeAPI 7.2+**

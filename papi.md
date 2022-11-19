@@ -1,0 +1,19 @@
+# PlaceholderAPI
+
+### Sponge版暂无此功能
+
+```
+%xconomy_balance%     余额
+%xconomy_balance_value%     余额数值
+%xconomy_balance_formatted%   格式化的余额
+%xconomy_top_player_#%     排名#的玩家名称
+%xconomy_top_balance_#%     排名#的玩家余额
+%xconomy_top_balance_value_#%     排名#的玩家余额数值
+%xconomy_sum_balance%     服务器总余额
+%xconomy_sum_balance_value%     服务器总余额数值
+%xconomy_top_rank%     查询当前玩家的排名
+%xconomy_top_rank_#%     查询#玩家的排名
+%xconomy_global_paypermission%     显示pay指令的全局权限（0为没有，1为有）
+%xconomy_paypermission%     查询当前玩家的pay指令权限 （0为没有，1为有，Default为权限插件默认）
+%xconomy_paytoggle%     查询当前玩家是否接受转账 （0为没有，1为有）
+```
