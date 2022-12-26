@@ -3,6 +3,10 @@
   - [欢迎](README.md)
   - [功能](features.md)
 
+- 安装
+
+  - [安装](install.md)
+
 - 指令/权限
 
   - [指令](commands.md)
