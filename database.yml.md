@@ -8,8 +8,8 @@ Settings:
   #需要'slf4j'前置
   #至少需要JAVA11
   usepool: false
-  #是否禁用异步保存数据(SQLite无此设置)
-  disable-async: false
+  #设置最大线程池(SQLite无此设置)
+  max-threads: 5
 
 
 #SQLite设置
@@ -40,4 +40,18 @@ Pool-Settings:
   minimum-idle: 10
   maximum-lifetime: 180000
   idle-timeout: 60000
+
+
+#Redis设置
+Redis:
+  host: localhost
+  port: 6379
+  db-index: 1
+  pool-settings:
+    max-total: 10
+    max-idle: 10
+    min-idle: 0
+  auth:
+    user: ''
+    pass: ''
 ```

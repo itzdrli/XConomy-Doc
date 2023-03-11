@@ -5,17 +5,20 @@
 #Default模式会自动检测玩家的UUID(支持GeyserMC)
 #Online模式对于开启正版验证的服务器支持更好(支持Yggdrasil)
 #Offline模式不支持无视用户名大小写
+#如果您使用 floodgate(GeyserMC) 且选项 username-prefix 设置为空, 请使用 SemiOnline 模式
 UUID-mode: Default
 #在转换模式下, 可以使用指令 '/xconomy' 从其他基于Vault的插件导入数据
 #冲突的数据将会被跳过, 导入的数据将保存在 XConomy/importdata/data.yml
 #在这个模式下，XConomy不会正常启动
 #转换完成后，请进行数据检查并关闭该模式
-importdata-mode: false
+#Sponge版本没有此功能
+Importdata-mode: false
 
 
 #设置
 Settings:
-  #Chinese ChineseTW English French Spanish Russian Turkish Japanese German Indonesia Portuguese
+  #Chinese ChineseTW English French Spanish Russian Turkish Japanese German
+  #Indonesia Portuguese Italian
   language: Chinese
   #是否检查新版本
   check-update: true
@@ -41,6 +44,10 @@ Settings:
   ranking-size: 10
   #列表每页行数（排行榜以及帮助菜单）
   lines-per-page: 5
+  #如果你想直接修改数据库数据，请开启此功能
+  #禁用缓存后不支持异步保存数据
+  #禁用缓存会增加数据库的压力
+  disable-cache: false
   #是否保存转账记录
   #只支持MySQL
   transaction-record: true
@@ -52,7 +59,11 @@ Settings:
   username-ignore-case: false
 
 
-#非玩家账户是否启用,可以解决某些插件无法创建非玩家账户问题,比如Factions,Towny
+#可以解决某些插件无法创建非玩家账户问题,比如Factions
+#==========================================================================================
+#默认支持的插件(无需开启非玩家账户)
+#Towny
+#==========================================================================================
 #非玩家账户的数据不会进行BC同步
 non-player-account:
   #是否启用非玩家账户
@@ -65,8 +76,7 @@ non-player-account:
     #是否启用白名单
     enable: false
     fields-list:
-      - town-
-      - towny-
+      - tax
       - nation-
 
 
@@ -86,12 +96,17 @@ Currency:
     100000000: 亿
 
 
-#BungeeCord设置
-BungeeCord:
-  #是否启用BC同步
+#数据同步设置
+SyncData:
+  #是否启用数据同步
+  enable: false
+  #BungeeCord Redis
+  #================================================== BungeeCord Channel ==================================================
   #BC同步开启后,控制台和其他插件将无法在服务器无人的情况下修改金额
   #需要在spigot.yml中设置bungeecord为true
-  enable: false
+  #==================================================   Redis  Channel   ==================================================
+  #需要'slf4j'前置
+  channel-type: BungeeCord
   #服务器标识,请保持需要同步的子服务器的标识和数据库的设置一致
   sign: aa
 ```
