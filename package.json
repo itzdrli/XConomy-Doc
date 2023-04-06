@@ -16,6 +16,7 @@
     "nuxt": "^3.2.2"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.10.4"
+    "bootstrap-icons": "^1.10.4",
+    "patch-package": "^6.5.1"
   }
 }
